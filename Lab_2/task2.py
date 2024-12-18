@@ -16,8 +16,6 @@ BOOKS_DATABASE = [
 class Book:
     def __init__(self, id_, name, pages):
         """
-
-
         Создание и подготовка к работе объекта "Книга"
 
         :param id_: id книги
@@ -39,8 +37,6 @@ class Book:
 class Library:
     def __init__(self, books: list = None):
         """
-
-
         Создание и подготовка к работе объекта "Библиотека"
 
         :param books: список книг в библиотеке
@@ -49,8 +45,6 @@ class Library:
 
     def get_next_book_id(self):
         """
-
-
         Функция которая возвращает индекс для добавления новой книги
         """
         if len(self.books) == 0:
@@ -60,8 +54,6 @@ class Library:
 
     def get_index_by_book_id(self, book_id):
         """
-
-
         Функция которая возвращает индекс книги в списке
 
         :param book_id: id книги
