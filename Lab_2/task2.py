@@ -1,6 +1,3 @@
-BOOKS_DATABASE = [{"id": 1, "name": "test_name_1", "pages": 200, }, {"id": 2, "name": "test_name_2", "pages": 400, }]
-
-
 # TODO: написать класс Book
 class Book:
     def __init__(self, id_, name, pages):
@@ -32,6 +29,8 @@ class Library:
                 return index
         raise ValueError("Книги с запрашиваемым id не существует")
 
+
+BOOKS_DATABASE = [{"id": 1, "name": "test_name_1", "pages": 200, }, {"id": 2, "name": "test_name_2", "pages": 400, }]
 
 if __name__ == '__main__':
     empty_library = Library()
