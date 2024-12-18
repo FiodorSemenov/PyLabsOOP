@@ -1,12 +1,23 @@
 BOOKS_DATABASE = [
-    {"id": 1, "name": "test_name_1", "pages": 200},
-    {"id": 2, "name": "test_name_2", "pages": 400}
+    {
+        "id": 1,
+        "name": "test_name_1", "pages": 200,
+
+    },
+    {
+        "id": 2,
+        "name": "test_name_2",
+        "pages": 400,
+    }
 ]
+
 
 # TODO: написать класс Book
 class Book:
     def __init__(self, id_, name, pages):
         """
+
+
         Создание и подготовка к работе объекта "Книга"
 
         :param id_: id книги
@@ -28,6 +39,8 @@ class Book:
 class Library:
     def __init__(self, books: list = None):
         """
+
+
         Создание и подготовка к работе объекта "Библиотека"
 
         :param books: список книг в библиотеке
@@ -36,7 +49,9 @@ class Library:
 
     def get_next_book_id(self):
         """
-        Функция, которая возвращает индекс для добавления новой книги
+
+
+        Функция которая возвращает индекс для добавления новой книги
         """
         if len(self.books) == 0:
             return 1
@@ -45,7 +60,9 @@ class Library:
 
     def get_index_by_book_id(self, book_id):
         """
-        Функция, которая возвращает индекс книги в списке
+
+
+        Функция которая возвращает индекс книги в списке
 
         :param book_id: id книги
         """
@@ -59,10 +76,8 @@ if __name__ == '__main__':
     empty_library = Library()
     print(empty_library.get_next_book_id())
 
-    list_books = [
-        Book(id_=book_dict["id"], name=book_dict["name"], pages=book_dict["pages"])
-        for book_dict in BOOKS_DATABASE
-    ]
+    list_books = [Book(id_=book_dict["id"], name=book_dict["name"], pages=book_dict["pages"]) for book_dict in
+                  BOOKS_DATABASE]
     library_with_books = Library(books=list_books)
     print(library_with_books.get_next_book_id())
     print(library_with_books.get_index_by_book_id(1))
