@@ -37,13 +37,13 @@ class Manager:
 # TODO: описать дочерний класс
 class Person(Manager):
     """
-        Дочерний класс для конкретного менеджера
+    Дочерний класс для конкретного менеджера
 
-        Атрибуты:
-            salary(float): зарплата
-            working_schedule: график работы
-            name: имя менеджера
-        """
+    Атрибуты:
+        salary(float): зарплата
+        working_schedule: график работы
+        name: имя менеджера
+    """
 
     def __int__(self, salary: float, working_schedule: str, name: str):
         super().__init__(salary, working_schedule)
